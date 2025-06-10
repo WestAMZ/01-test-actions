@@ -2,14 +2,21 @@
 # name: define a name for this directive
 name: Deploy to server
 
-# on: sets the triggers
+# on: sets the triggers, in this case on: push (without any branch) will trigger in push over any branch
 on: push
 
 # jobs: includes all the jobs to be performed
 jobs:
     first_job:
+        # needed directive which indicates the system which will run the job
         runs-on: ubuntu-latest
 
         steps:
             - name: Hola mundo
               run: echo "Hola mundo"
+    second_job:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Hola mundo
+              run: echo "Hola mundo segundo"
