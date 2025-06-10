@@ -1,0 +1,15 @@
+# Required keys, name, on, jobs
+# name: define a name for this directive
+name: Deploy to server
+
+# on: sets the triggers
+on: push
+
+# jobs: includes all the jobs to be performed
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Hola mundo
+              run: echo "Hola mundo"
