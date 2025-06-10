@@ -11,20 +11,20 @@ jobs:
         # needed directive which indicates the system which will run the job
         runs-on: ubuntu-latest
         env: 
-            # env variables, in this case we define a variable called NAME
-            NAME: "My name"
+         # env variables, in this case we define a variable called NAME
+         NAME: "My name"
         steps:
             - name: Hola mundo
-             run: echo "Hola mundo, github.ref value ${{github.ref}}"
+              run: echo "Hola mundo, github.ref value ${{github.ref}}"
 
             - name: Working dir
               run: ls -al
 
             - name: Action
-             uses: actions/checkout@v4
+              uses: actions/checkout@v4
             
             - name: Working dir after action
-             run: ls -al
+              run: ls -al
     second_job:
         #name, it is the text to be displayed for this job, in case it is not defined we will see the identifier ( second_job )
         name: Tutorial CodigoFacilito job 2
