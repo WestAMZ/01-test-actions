@@ -13,10 +13,10 @@ jobs:
 
         steps:
             - name: Hola mundo
-              run: echo "Hola mundo ${{gihub.ref}}"
+              run: echo "Hola mundo, github.ref value ${{github.ref}}"
     second_job:
         # if takes a boolean value, and it define if a job will be executed
-        if: ${{ gihub.ref == 'ref/heads/main' }}
+        if: ${{ github.ref == 'ref/heads/main' }}
         # needs indicates that job has dependency (needs to be run first other job), without this the jobs will run in parallel
         needs: first_job
         runs-on: ubuntu-latest
