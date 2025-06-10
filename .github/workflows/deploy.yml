@@ -13,9 +13,9 @@ jobs:
 
         steps:
             - name: Hola mundo
-              run: echo "Hola mundo"
+              run: cat hola.php
     second_job:
-        # needs indicates that job has dependency (needs to be run first other job) 
+        # needs indicates that job has dependency (needs to be run first other job), without this the jobs will run in parallel
         needs: first_job
         runs-on: ubuntu-latest
 
